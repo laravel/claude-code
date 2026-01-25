@@ -1,21 +1,22 @@
 {
-  "name": "laravel",
+  "name": "yii2",
   "owner": {
-    "name": "Taylor Otwell",
-    "email": "taylor@laravel.com"
+    "name": "Juliano Kloos",
+    "email": "julianokloos@gmail.com"
   },
   "metadata": {
-    "description": "Claude Code plugins for PHP / Laravel development"
+    "description": "Claude Code plugins for PHP / Yii2 development. Forked from https://github.com/laravel/claude-code.",
+    "version": "1.0.0"
   },
   "plugins": [
     {
-      "name": "laravel-simplifier",
-      "source": "./laravel-simplifier",
-      "description": "Simplifies and refines PHP / Laravel code for clarity, consistency, and maintainability",
+      "name": "yii2-simplifier",
+      "source": "./yii2-simplifier",
+      "description": "Simplifies and refines PHP / Yii2 code for clarity, consistency, and maintainability",
       "version": "1.0.0",
       "author": {
-        "name": "Taylor Otwell",
-        "email": "taylor@laravel.com"
+        "name": "Juliano Kloos",
+        "email": "julianokloos@gmail.com"
       },
       "category": "productivity"
     }

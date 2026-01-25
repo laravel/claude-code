@@ -1,0 +1,9 @@
+{
+    "name": "yii2-simplifier",
+    "version": "1.0.0",
+    "description": "Agent that simplifies and refines PHP/Yii2 code for clarity, consistency, and maintainability while preserving functionality",
+    "author": {
+        "name": "Juliano Kloos",
+        "email": "julianokloos@gmail.com"
+    }
+}
