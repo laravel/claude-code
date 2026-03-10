@@ -1,0 +1,3 @@
+[submodule "laravel-cloud/cloud-cli"]
+	path = laravel-cloud/cloud-cli
+	url = https://github.com/laravel/cloud-cli.git

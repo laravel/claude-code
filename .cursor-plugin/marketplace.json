@@ -16,8 +16,7 @@
       "author": {
         "name": "Taylor Otwell",
         "email": "taylor@laravel.com"
-      },
-      "category": "productivity"
+      }
     },
     {
       "name": "laravel-cloud",
@@ -27,8 +26,7 @@
       "author": {
         "name": "Taylor Otwell",
         "email": "taylor@laravel.com"
-      },
-      "category": "productivity"
+      }
     }
   ]
 }
