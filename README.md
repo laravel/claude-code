@@ -29,7 +29,7 @@ A skill for deploying and managing applications on [Laravel Cloud](https://cloud
 ### Claude Code
 
 ```
-/plugin marketplace add laravel/claude-code
+/plugin marketplace add laravel/agent-skills
 /plugin install laravel-simplifier@laravel
 /plugin install laravel-cloud@laravel
 ```
@@ -37,7 +37,7 @@ A skill for deploying and managing applications on [Laravel Cloud](https://cloud
 ### Cursor
 
 ```
-/plugin marketplace add laravel/claude-code
+/plugin marketplace add laravel/agent-skills
 /plugin install laravel-simplifier@laravel
 /plugin install laravel-cloud@laravel
 ```
@@ -62,7 +62,7 @@ A skill for deploying and managing applications on [Laravel Cloud](https://cloud
 After cloning, initialize the submodule to pull the Laravel Cloud skill:
 
 ```bash
-git clone --recurse-submodules https://github.com/laravel/claude-code.git
+git clone --recurse-submodules https://github.com/laravel/agent-skills.git
 ```
 
 Or if already cloned:
