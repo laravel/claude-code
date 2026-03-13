@@ -41,13 +41,15 @@ Copy the plugin directories into your global `~/.config/opencode/` folder:
 **laravel-simplifier**
 
 ```bash
-cp -r path/to/agent-skills/laravel-simplifier/.opencode/agents ~/.config/opencode/agents
+mkdir -p ~/.config/opencode/agents
+cp -r path/to/agent-skills/laravel-simplifier/.opencode/agents/. ~/.config/opencode/agents/
 ```
 
 **laravel-cloud**
 
 ```bash
-cp -r path/to/agent-skills/laravel-cloud/.opencode/skills ~/.config/opencode/skills
+mkdir -p ~/.config/opencode/skills
+cp -r path/to/agent-skills/laravel-cloud/.opencode/skills/. ~/.config/opencode/skills/
 ```
 
 Or place them in your project's `.opencode/` directory for project-scoped access:
