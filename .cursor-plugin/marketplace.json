@@ -27,6 +27,16 @@
         "name": "Taylor Otwell",
         "email": "taylor@laravel.com"
       }
+    },
+    {
+      "name": "laravel-nightwatch",
+      "source": "./laravel-nightwatch",
+      "description": "Configuring Laravel Nightwatch data collection, sampling, filtering, and redaction",
+      "version": "1.0.0",
+      "author": {
+        "name": "Taylor Otwell",
+        "email": "taylor@laravel.com"
+      }
     }
   ]
 }
