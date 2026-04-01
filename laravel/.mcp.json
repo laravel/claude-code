@@ -1,0 +1,8 @@
+{
+    "mcpServers": {
+        "nightwatch": {
+            "command": "npx",
+            "args": ["-y", "mcp-remote", "https://nightwatch.laravel.com/mcp"]
+        }
+    }
+}

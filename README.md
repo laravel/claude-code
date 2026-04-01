@@ -1,10 +1,10 @@
 # Laravel Agents & Skills
 
-A collection of agents and skills for PHP / Laravel development, available as plugins for both [Claude Code](https://code.claude.com) and [Cursor](https://cursor.com).
+A collection of agents and skills for PHP / Laravel development, available as a plugin for [Claude Code](https://code.claude.com/docs/en/plugins) and [Cursor](https://cursor.com/docs/plugins).
 
-## Plugins
+## What's Included
 
-### laravel-simplifier
+### laravel-simplifier (agent)
 
 An agent that reviews recently modified PHP / Laravel code and refines it for clarity, consistency, and maintainability — without changing functionality.
 
@@ -13,7 +13,7 @@ An agent that reviews recently modified PHP / Laravel code and refines it for cl
 - Improves naming and readability
 - Focuses on recently modified code by default
 
-### laravel-cloud
+### deploying-laravel-cloud (skill)
 
 A skill for deploying and managing applications on [Laravel Cloud](https://cloud.laravel.com) using the `cloud` CLI.
 
@@ -22,17 +22,54 @@ A skill for deploying and managing applications on [Laravel Cloud](https://cloud
 - Includes operational checklists for multi-step tasks
 - Follows the CRUD command patterns of the Cloud CLI
 
-> The skill content is sourced from [`laravel/cloud-cli`](https://github.com/laravel/cloud-cli/tree/main/skills/deploying-laravel-cloud) via a sparse-checkout submodule.
+### configure-nightwatch (skill)
+
+A skill for configuring [Laravel Nightwatch](https://nightwatch.laravel.com) data collection, sampling rates, filtering rules, and redaction policies.
+
+- Guides setup and configuration of Nightwatch in your application
+- Manages data volume through sampling and filtering
+- Protects sensitive data (PII) with redaction policies
+- Optimizes event collection for production workloads
+
+### Nightwatch MCP Server
+
+The plugin bundles the [Nightwatch MCP server](https://nightwatch.laravel.com/docs/mcp-server) — it is configured automatically when you install the plugin. This enables your AI assistant to browse issues, view stack traces, update statuses, and add comments.
 
 ## Installation
+
+### Skills CLI
+
+```bash
+npx skills add laravel/agent-skills
+```
 
 ### Claude Code
 
 ```
 /plugin marketplace add laravel/agent-skills
-/plugin install laravel-simplifier@laravel
-/plugin install laravel-cloud@laravel
+/plugin install laravel@laravel
 ```
+
+### Cursor
+
+Search for **Laravel** in the [Cursor plugin marketplace](https://cursor.com/docs/plugins) panel and install it directly. The plugin can be scoped to a project or installed at the user level.
+
+For local development, clone the repo and symlink into Cursor's local plugins directory:
+
+```bash
+git clone https://github.com/laravel/agent-skills.git
+ln -s "$(pwd)/agent-skills/laravel" ~/.cursor/plugins/local/laravel
+```
+
+**Team marketplace (Cursor Teams / Enterprise):**
+
+1. Go to **Dashboard → Settings → Plugins**
+2. In **Team Marketplaces**, click **Import**
+3. Paste the GitHub repository URL (`https://github.com/laravel/agent-skills`) and continue
+4. Review the parsed plugins — optionally set Team Access groups, then continue
+5. Set the marketplace name and description, then save
+
+See the [Cursor plugin reference](https://cursor.com/docs/reference/plugins) for full details on plugin structure and publishing.
 
 ## Usage
 
@@ -42,11 +79,18 @@ A skill for deploying and managing applications on [Laravel Cloud](https://cloud
 > Review recent changes using the laravel-simplifier agent
 ```
 
-**laravel-cloud** — triggers automatically when you ask about deploying or managing Laravel Cloud resources:
+**deploying-laravel-cloud** — triggers automatically when you ask about deploying or managing Laravel Cloud resources:
 
 ```
 > Deploy my app to Laravel Cloud
 > Set up a database and cache for the staging environment
+```
+
+**configure-nightwatch** — triggers when you ask about configuring Nightwatch:
+
+```
+> Configure Nightwatch sampling rates for production
+> Set up PII redaction for Nightwatch
 ```
 
 ## Development
