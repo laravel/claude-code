@@ -1,9 +1,9 @@
 {
-  "name": "laravel",
-  "version": "1.0.0",
-  "description": "Agents and skills for PHP / Laravel development",
-  "author": {
-    "name": "Taylor Otwell",
-    "email": "taylor@laravel.com"
-  }
+    "name": "laravel",
+    "version": "1.0.0",
+    "description": "Agents and skills for PHP / Laravel development",
+    "author": {
+        "name": "Taylor Otwell",
+        "email": "taylor@laravel.com"
+    }
 }
