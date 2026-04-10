@@ -98,7 +98,7 @@ Use your judgment:
 
 ## Remote Access
 
-### Tinker
+### Tinker (> v0.2.0)
 
 Run PHP code directly in a Cloud environment:
 
