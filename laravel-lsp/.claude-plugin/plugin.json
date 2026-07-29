@@ -1,0 +1,9 @@
+{
+    "name": "laravel-lsp",
+    "version": "1.0.0",
+    "description": "Navigating routes, views, config, and translations via the Laravel language server",
+    "author": {
+        "name": "Taylor Otwell",
+        "email": "taylor@laravel.com"
+    }
+}

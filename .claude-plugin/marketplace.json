@@ -40,6 +40,17 @@
         "email": "taylor@laravel.com"
       },
       "category": "productivity"
+    },
+    {
+      "name": "laravel-lsp",
+      "source": "./laravel-lsp",
+      "description": "Navigating routes, views, config, and translations via the Laravel language server",
+      "version": "1.0.0",
+      "author": {
+        "name": "Taylor Otwell",
+        "email": "taylor@laravel.com"
+      },
+      "category": "productivity"
     }
   ]
 }

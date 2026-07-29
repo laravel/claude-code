@@ -11,6 +11,7 @@ Laravel's official collection of agent skills, available as plugins for [Claude 
 /plugin install laravel@laravel
 /plugin install laravel-cloud@laravel
 /plugin install laravel-nightwatch@laravel
+/plugin install laravel-lsp@laravel
 ```
 
 ### Cursor
@@ -61,6 +62,13 @@ npx skills add https://github.com/laravel/agent-skills/tree/main/laravel/skills/
 > Pull the 2FA autofocus fix from my starter kit upstream
 ```
 
+**Laravel LSP** answers code navigation questions through the [Laravel language server](https://github.com/laravel/lsp):
+
+```
+> Where is the 'dashboard.index' view defined?
+> What does config('services.stripe.key') resolve to?
+```
+
 ## Plugins
 
 ### Laravel
@@ -100,3 +108,15 @@ A skill for configuring [Laravel Nightwatch](https://nightwatch.laravel.com) dat
 | Sampling & filtering | Manages data volume through sampling and filtering rules |
 | PII redaction | Protects sensitive data with redaction policies |
 | Event optimization | Optimizes event collection for production workloads |
+
+### Laravel LSP
+
+Registers the [Laravel language server](https://github.com/laravel/lsp) with Claude Code's LSP tool for `.php` and `.blade.php` files, so the agent resolves Laravel constructs through the language server instead of searching for them.
+
+- Go-to-definition on views, routes, config keys, translations, and middleware aliases
+- Hover shows resolved values: config settings, translated strings, bound implementations
+- Works in both PHP and Blade files
+
+Requires the language server: `composer global require laravel/lsp`, with Composer's global bin directory on your `PATH`. Claude Code runs one language server per file extension, so disable other PHP language server plugins when using this one.
+
+The server detects Laravel at the workspace root. In a monorepo where the app lives in a subdirectory, add a project-level copy of this plugin's `.lsp.json` with `"workspaceFolder"` set to the app path (for example `"apps/api"`), and disable this plugin for that project.
