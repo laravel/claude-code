@@ -40,6 +40,27 @@
         "email": "taylor@laravel.com"
       },
       "category": "productivity"
+    },
+    {
+      "name": "laravel-lsp",
+      "source": "./laravel-lsp",
+      "description": "Laravel language server for PHP code intelligence",
+      "version": "1.0.0",
+      "author": {
+        "name": "Taylor Otwell",
+        "email": "taylor@laravel.com"
+      },
+      "category": "development",
+      "strict": false,
+      "lspServers": {
+        "laravel-lsp": {
+          "command": "laravel-lsp",
+          "args": [],
+          "extensionToLanguage": {
+            ".php": "php"
+          }
+        }
+      }
     }
   ]
 }

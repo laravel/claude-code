@@ -1,0 +1,9 @@
+{
+    "name": "laravel-lsp",
+    "version": "1.0.0",
+    "description": "Laravel language server for PHP code intelligence",
+    "author": {
+        "name": "Taylor Otwell",
+        "email": "taylor@laravel.com"
+    }
+}
