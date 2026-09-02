@@ -17,7 +17,7 @@ cloud auth -n
 
 Commands follow a CRUD pattern: `resource:list`, `resource:get`, `resource:create`, `resource:update`, `resource:delete`.
 
-Available resources: `application`, `environment`, `instance`, `database-cluster`, `database`, `cache`, `bucket`, `domain`, `websocket-cluster`, `background-process`, `command`, `deployment`.
+Available resources: `application`, `environment`, `instance`, `database-cluster`, `database`, `cache`, `bucket`, `domain`, `websocket-cluster`, `background-process`, `secret`, `command`, `deployment`.
 
 Some resources have additional commands (e.g., `domain:verify`, `database:open`, `instance:sizes`, `cache:types`). Discover these via `cloud -h`.
 
@@ -49,6 +49,8 @@ cloud deploy:monitor -n
 ```
 
 Environment variables? → `cloud environment:variables -n --force`
+
+Secrets? → `echo "$VALUE" | cloud secret:create --name=NAME --json -n` then `cloud environment-secret:attach`
 
 Provision infrastructure? → `cloud <resource>:create --json -n`
 
@@ -96,6 +98,25 @@ Use your judgment:
 - Which resources to provision — based on what the user describes
 - Order of provisioning — no strict sequence required
 - How to present output — summarize, show raw, or extract fields based on context
+
+## Secrets
+
+Encrypted values shared across the organization and attached to environments. The CLI encrypts the value locally, so plaintext never reaches the API.
+
+```sh
+cloud secret:list --json -n
+echo "$VALUE" | cloud secret:create --name=STRIPE_KEY --json -n
+cloud environment-secret:attach {environment} {secretId} -n
+cloud environment-secret:list {environment} --json -n
+```
+
+Pipe the value in. `--value=` works, but leaves the plaintext in shell history and the process list.
+
+`secret:update`, `secret:delete`, and `environment-secret:attach` take secret IDs, not names — names are not unique. Read IDs from `cloud secret:list --json -n`.
+
+There is no `secret:get`, and no way to detach a secret from a single environment. `secret:delete` removes it and detaches it everywhere.
+
+Secrets need the `sodium` PHP extension. No other command does.
 
 ## Remote Access
 

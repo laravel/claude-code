@@ -10,6 +10,7 @@ Use these checklists when performing complex setups. Copy the relevant checklist
 - [ ] Provision the database (`database-cluster:create` then `database:create`)
 - [ ] Provision the cache (`cache:create`)
 - [ ] Set environment variables (`environment:variables`)
+- [ ] Create and attach any secrets (`secret:create` then `environment-secret:attach`)
 - [ ] Attach custom domain (`domain:create` then `domain:verify`)
 - [ ] Deploy (`deploy` then `deploy:monitor`)
 - [ ] Verify the deployment is live
