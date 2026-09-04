@@ -54,6 +54,8 @@ Secrets? → `echo "$VALUE" | cloud secret:create --name=NAME --json -n` then `c
 
 Provision infrastructure? → `cloud <resource>:create --json -n`
 
+Monorepo (app in a subdirectory)? → add `--root-directory=<subdir>` to `cloud ship` or `cloud application:create`
+
 Custom domain? → `cloud domain:create --json -n` then `cloud domain:verify -n`
 
 For multi-step operations, see [reference/checklists.md](reference/checklists.md).
