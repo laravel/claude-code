@@ -20,10 +20,10 @@ jobs:
           git clone --no-checkout --depth 1 --filter=blob:none \
             https://github.com/laravel/cloud-cli.git /tmp/cloud-cli
           cd /tmp/cloud-cli
-          git sparse-checkout set skills/deploying-laravel-cloud
+          git sparse-checkout set skills/deploying-to-cloud
           git checkout
-          cp -r skills/deploying-laravel-cloud/. \
-            $GITHUB_WORKSPACE/laravel-cloud/skills/deploying-laravel-cloud/
+          cp -r skills/deploying-to-cloud/. \
+            $GITHUB_WORKSPACE/laravel-cloud/skills/deploying-to-cloud/
 
       - name: Fetch nightwatch skills
         run: |
