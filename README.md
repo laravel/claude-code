@@ -23,7 +23,7 @@ Install individual skills directly from this repository:
 
 ```sh
 # Laravel Cloud
-npx skills add https://github.com/laravel/agent-skills/tree/main/laravel-cloud/skills/deploying-laravel-cloud
+npx skills add https://github.com/laravel/agent-skills/tree/main/laravel-cloud/skills/deploying-to-cloud
 
 # Laravel Nightwatch
 npx skills add https://github.com/laravel/agent-skills/tree/main/laravel-nightwatch/skills/configure-nightwatch
@@ -86,7 +86,8 @@ A bundle of Laravel-focused agents and skills.
 A skill for deploying and managing applications on [Laravel Cloud](https://cloud.laravel.com) using the `cloud` CLI.
 
 - Guides deployment workflows (first deploy, existing apps, environment setup)
-- Manages infrastructure resources (databases, caches, domains, buckets)
+- Manages infrastructure resources (databases, caches, domains, buckets, secrets)
+- Covers build/deploy commands, queues, scheduling, and billing/usage queries
 - Includes operational checklists for multi-step tasks
 - Follows the CRUD command patterns of the Cloud CLI
 
