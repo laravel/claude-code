@@ -1,0 +1,10 @@
+{
+    "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+    "name": "laravel",
+    "version": "1.0.0",
+    "description": "Agents and skills for PHP / Laravel development",
+    "author": {
+        "name": "Taylor Otwell",
+        "email": "taylor@laravel.com"
+    }
+}

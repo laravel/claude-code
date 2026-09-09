@@ -1,0 +1,23 @@
+{
+    "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+    "name": "laravel-lsp",
+    "version": "1.0.0",
+    "description": "Laravel language server for PHP code intelligence",
+    "author": {
+        "name": "Taylor Otwell",
+        "email": "taylor@laravel.com"
+    },
+    "extensions": {
+        "com.anthropic.claude-code": {
+            "lspServers": {
+                "laravel-lsp": {
+                    "command": "laravel-lsp",
+                    "args": [],
+                    "extensionToLanguage": {
+                        ".php": "php"
+                    }
+                }
+            }
+        }
+    }
+}
